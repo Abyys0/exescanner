@@ -32,7 +32,8 @@ router.post('/', (req, res) => {
       sessionId: session.id,
       level: 'INFO',
       message: `Session created for client: ${clientLabel}`,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      context: undefined
     });
     
     res.status(201).json(session);
