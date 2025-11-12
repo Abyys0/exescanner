@@ -19,7 +19,7 @@ import logsRoutes from './routes/logs';
 import ingestRoutes, { setSocketIO } from './routes/ingest';
 
 // Initialize DB
-import { initDatabase } from './db';
+import { initDatabase } from './db/index';
 
 const PORT = process.env.PORT || 3001;
 const CORS_ORIGIN = process.env.CORS_ORIGIN || '*';
