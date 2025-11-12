@@ -10,13 +10,13 @@ router.get('/', (req, res) => {
   try {
     const { sessionId, page = '1', limit = '50', severity, status } = req.query;
     
-    const { results, total } = models.getResults(
-      sessionId as string | undefined,
-      parseInt(page as string),
-      parseInt(limit as string),
-      severity as string | undefined,
-      status as string | undefined
-    );
+    const { results, total } = models.getResults({
+      sessionId: sessionId as string | undefined,
+      page: parseInt(page as string),
+      limit: parseInt(limit as string),
+      severity: severity as string | undefined,
+      status: status as string | undefined
+    });
     
     res.json({
       results,

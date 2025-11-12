@@ -10,12 +10,12 @@ router.get('/', (req, res) => {
   try {
     const { sessionId, level, page = '1', limit = '100' } = req.query;
     
-    const { logs, total } = models.getLogs(
-      sessionId as string | undefined,
-      level as string | undefined,
-      parseInt(page as string),
-      parseInt(limit as string)
-    );
+    const { logs, total } = models.getLogs({
+      sessionId: sessionId as string | undefined,
+      level: level as string | undefined,
+      page: parseInt(page as string),
+      limit: parseInt(limit as string)
+    });
     
     res.json({
       logs,
