@@ -1,4 +1,5 @@
 {
+  // trigger: railway redeploy
   "name": "exescanner-server",
   "version": "1.0.0",
   "description": "Real-time monitoring backend for ExeScanner",
