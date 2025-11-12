@@ -1,0 +1,9 @@
+{
+  "name": "exescanner-server-root",
+  "version": "1.0.0",
+  "description": "Pacote dummy para Railway encontrar package.json na raiz.",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'Use o package.json do server'"
+  }
+}
