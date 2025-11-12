@@ -1,0 +1,17 @@
+# Padrão: arquivos de texto com LF no repositório
+* text=auto eol=lf
+
+# Scripts Windows devem usar CRLF
+*.bat eol=crlf
+*.cmd eol=crlf
+*.ps1 eol=crlf
+
+# Arquivos binários
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.7z binary
