@@ -4,6 +4,7 @@
   "description": "Pacote dummy para Railway encontrar package.json na raiz.",
   "main": "index.js",
   "scripts": {
-    "start": "echo 'Use o package.json do server'"
+    "start": "echo 'Use o package.json do server'",
+    "build": "echo 'Use o build do server'"
   }
 }
