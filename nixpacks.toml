@@ -14,5 +14,5 @@ cmds = [
 workingDirectory = 'server'
 
 [phases.start]
-cmds = ['npm start']
+cmds = ['npm run build && npm start']
 workingDirectory = 'server'
