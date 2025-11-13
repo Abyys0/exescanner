@@ -65,9 +65,8 @@ setSocketIO(io);
 
 // Serve static frontend in production
 if (IS_PRODUCTION) {
-  const frontendPath = path.join(__dirname, '..', '..', 'client', 'dist');
+  const frontendPath = path.join(__dirname, '..', '..', 'web', 'dist');
   app.use(express.static(frontendPath));
-  
   // SPA fallback
   app.get('*', (req, res) => {
     if (!req.path.startsWith('/api') && !req.path.startsWith('/auth') && 
@@ -76,7 +75,6 @@ if (IS_PRODUCTION) {
       res.sendFile(path.join(frontendPath, 'index.html'));
     }
   });
-  
   console.log(`📦 Serving frontend from: ${frontendPath}`);
 }
 

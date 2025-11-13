@@ -114,8 +114,8 @@ export const Resultados: React.FC = () => {
                   className="table-row"
                 >
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-100">{result.fileName}</div>
-                    <div className="text-xs text-gray-500 truncate max-w-md">{result.filePath}</div>
+                    <div className="text-sm font-medium text-gray-100">{result.filename}</div>
+                    <div className="text-xs text-gray-500 truncate max-w-md">{result.path}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="text-sm text-gray-300">{result.type}</span>
@@ -135,7 +135,7 @@ export const Resultados: React.FC = () => {
                     )}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
-                    {new Date(result.timestamp).toLocaleString('pt-BR')}
+                    {new Date(result.detectedAt).toLocaleString('pt-BR')}
                   </td>
                 </tr>
               ))}
@@ -185,11 +185,11 @@ export const Resultados: React.FC = () => {
           <div className="space-y-4">
             <div>
               <label className="text-sm text-gray-400">Arquivo</label>
-              <p className="font-medium">{selectedResult.fileName}</p>
+              <p className="font-medium">{selectedResult.filename}</p>
             </div>
             <div>
               <label className="text-sm text-gray-400">Caminho Completo</label>
-              <p className="text-sm break-all">{selectedResult.filePath}</p>
+              <p className="text-sm break-all">{selectedResult.path}</p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>

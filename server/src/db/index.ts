@@ -4,6 +4,12 @@ import fs from 'fs';
 
 const DB_PATH = process.env.DB_PATH || './data/scanner.db';
 
+// Garante que o diretório data/ existe antes de qualquer operação
+const dataDir = path.dirname(DB_PATH);
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
 let db: SqlJsDatabase;
 
 export async function initDatabase(): Promise<SqlJsDatabase> {
